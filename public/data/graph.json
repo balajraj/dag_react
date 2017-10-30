@@ -1,0 +1,47 @@
+{
+   "nodes" : [
+    {
+      "id" : "id1",
+      "body" : "return arg;",
+      "arg"  : true,
+      "true_id" : "id2",
+      "false_id"  : null
+    },
+    {
+      "id" : "id2",
+      "body" : "return arg;",
+      "arg"  : true,
+      "true_id" : "id3",
+      "false_id" : "id5"
+   }, 
+   {
+     "id" : "id3",
+     "body" : "return arg;",
+     "true_id" : "id4",
+      "arg"  : true,
+     "false_id" : null
+   },
+   {
+     "id" : "id4",
+     "body" : "return arg;",
+     "true_id" : null,
+      "arg"  : true,
+     "false_id" : null
+   },
+   {
+     "id" : "id5",
+     "body" : "return arg;",
+     "true_id" : "id6",
+      "arg"  : true,
+     "false_id" : null
+   },
+   {
+     "id" : "id6",
+     "body" : "return arg;",
+      "arg"  : true,
+     "true_id" : null,
+     "false_id" : null
+   }
+
+   ]
+}

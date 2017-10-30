@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+            function getParameter(paramName) {
+                var searchString = window.location.search.substring(1), i, val,
+                   params = searchString.split("&");
+                for ( i = 0; i < params.length; i++) {
+                    val = params[i].split("=");
+                    if (val[0] == paramName) {
+                        return val[1];
+                    }
+                }
+                return null;
+            }
+            function getTitle() {
+                document.write(getParameter("id"));
+            }
+            function getFunction() {
+                document.write(unescape(getParameter("func")));
+            }
+            function getPassedId() {
+                document.write(getParameter("passid"));
+            }
+            function getFailId() {
+                document.write(getParameter("failid"));
+            }
+     </script>
+    <meta charset="UTF-8">
+    <title>
+      Rule Title
+    </title>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><script>getTitle();</script> Rule Title</h1>
+        </div>
+        <div class="wrapper">
+            <div class="content">
+
+                    <div class="row">
+                      <div class="column">
+                         <h2>Rule body</h2>
+                         <div style="width:300px;background-color:#FFFFFF;height:50px;border:1px solid #000;">
+                                <script>getFunction();</script>
+                         </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="column">
+                        <h2>Next rule-id if passed</h2>
+                        <div style="width:70px;background-color:#FFFFFF;height:15px;border:1px solid #000;">
+                          <script>getPassedId();</script>
+                       </div>
+                      </div>
+                      <div class="column">
+                        <h2>Next rule-id if failed</h2>
+                        <div style="width:70px;background-color:#FFFFFF;height:15px;border:1px solid #000;">
+                          <script>getFailId();</script>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+</html>
