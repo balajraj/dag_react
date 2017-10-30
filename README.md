@@ -1,6 +1,5 @@
-Friendsurance assignment solution
+React JS project on DAG execution
 =================================
-
 Please install the following the npm packages to begin with. 
 
 ```
